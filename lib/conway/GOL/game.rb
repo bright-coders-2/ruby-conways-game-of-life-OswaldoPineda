@@ -1,8 +1,8 @@
 module Conway
     class Game
         def initialize
-            @world = Conway::World.new(30,150)
-        end
+            @world = Conway::World.new(30,100)
+        end 
 
         def init
           loop do
@@ -21,7 +21,9 @@ module Conway
                 puts
             end
         end
-    
+        
+        private
+
         def rules
             live = []
             die = []

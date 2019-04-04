@@ -5,6 +5,6 @@ require_relative "./GOL/game"
 require "colorize"
 
 module Conway
-  game = Conway::Game.new
-  game.init
+  # game = Conway::Game.new
+  # game.init
 end
