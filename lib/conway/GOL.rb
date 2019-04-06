@@ -1,8 +1,10 @@
-require "conway/GOL/version"
+require_relative "./GOL/version"
+require_relative "./GOL/world"
+require_relative "./GOL/cell"
+require_relative "./GOL/game"
+require "colorize"
 
 module Conway
-  module GOL
-    class Error < StandardError; end
-    # Your code goes here...
-  end
+  # game = Conway::Game.new
+  # game.init
 end
