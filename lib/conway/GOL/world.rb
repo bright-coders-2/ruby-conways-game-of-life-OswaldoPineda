@@ -2,7 +2,7 @@
 module Conway
     class World
         attr_accessor :rows, :cols, :cells, :cell_grid
-        def initialize(rows=30, cols=110)
+        def initialize(rows=30, cols=110,user_cell_position=[])
             @rows = rows
             @cols = cols
             @cells = []
@@ -13,14 +13,14 @@ module Conway
                                 cell
                             end
                         end
-            random_generator_cell
+            @user_cell_position = user_cell_position
+            create_cell(@user_cell_position)
         end
     
-    
-        def random_generator_cell
-            cells.each do |cell|
-              cell.alive = [true, false].sample
-            end
+        def create_cell(user_cell_position)
+          user_cell_position.each do |seed| 
+            cell_grid[seed[0]][seed[1]].alive = true
+          end
         end
         
         def neighbours_around_cell(cell)
@@ -58,6 +58,12 @@ module Conway
                 candidate.alive? ? live_neighbours +=1 : '' 
             end
             live_neighbours
+        end
+
+        def random_generator_cell
+          cells.each do |cell|
+            cell.alive = [true, false].sample
+          end
         end
     
     end

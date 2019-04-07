@@ -15,26 +15,26 @@ RSpec.describe Conway::Cell do
         end
     end
 
-    describe "alive?" do
+    describe "#alive?" do
         it "check if cell is live" do
             expect(cell.alive?).to eq(false)
         end
     end
 
-    describe 'dead?' do
+    describe '#dead?' do
         it "check if cell is dead" do
             expect(cell.dead?).to eq(true)
         end
     end
 
-    describe 'live!' do
+    describe '#live!' do
       it 'change the alive status to true' do
           cell.live!
           expect(cell.alive).to eq(true)
       end
     end
 
-    describe 'die!' do
+    describe '#die!' do
         it 'change the alive status to false' do
             cell.die!
             expect(cell.alive).to eq(false)

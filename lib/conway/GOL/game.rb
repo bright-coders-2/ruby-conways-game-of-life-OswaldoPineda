@@ -1,10 +1,12 @@
 module Conway
     class Game
-        def initialize
-            @world = Conway::World.new(30,100)
+      attr_accessor :world
+        def initialize (world = Conway::World.new)
+            @world = world
         end 
 
-        def init
+        def start
+          @world.random_generator_cell
           loop do
               rules
               print_board
@@ -21,8 +23,6 @@ module Conway
                 puts
             end
         end
-        
-        private
 
         def rules
             live = []
