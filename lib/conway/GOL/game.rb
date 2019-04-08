@@ -32,8 +32,8 @@ module Conway
         cell.alive? && @world.neighbours_around_cell(cell) > 3 ? die << cell : ' '
         cell.dead? && @world.neighbours_around_cell(cell) == 3 ? live << cell : ' '
       end
-      die.each { cell.die! }
-      live.each { cell.live! }
+      die.each { |c| c.die! }
+      live.each { |c| c.live! }
     end
   end
 end

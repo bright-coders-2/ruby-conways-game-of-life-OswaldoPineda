@@ -1,6 +1,7 @@
-module Conwapos
+
+module Conway
   class Cell
-    attr_accessor :alive, :mark, :pos_x, :y
+    attr_accessor :alive, :mark, :pos_x, :pos_y
     def initialize(pos_x, pos_y)
       @alive = false
       @mark = '-'.black
