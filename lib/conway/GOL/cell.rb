@@ -1,3 +1,4 @@
+
 module Conway
   class Cell
     attr_accessor :alive, :mark, :pos_x, :pos_y
