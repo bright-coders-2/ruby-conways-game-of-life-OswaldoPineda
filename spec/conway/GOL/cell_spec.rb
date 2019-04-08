@@ -5,10 +5,10 @@ RSpec.describe Conway::Cell do
 
   describe '#Initialize' do
     it 'should be the value x of instance' do
-      expect(cell.x).to eq(0)
+      expect(cell.pos_x).to eq(0)
     end
     it 'should be the value y of instance' do
-      expect(cell.y).to eq(0)
+      expect(cell.pos_y).to eq(0)
     end
     it 'should be dead' do
       expect(cell.alive).not_to eq(true)
