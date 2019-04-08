@@ -1,3 +1,3 @@
-require "../GOL.rb"
+require_relative "../../conway.rb"
   game = Conway::Game.new
   game.start
